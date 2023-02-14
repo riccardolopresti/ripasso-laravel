@@ -47,7 +47,10 @@ class PagamentoController extends Controller
 
         if ($result->success) {
             // pagamento completato
-            dd('completato');
+            $transaction = $result->transaction;
+            $transaction->status;
+
+            //dd('completato');
         } else {
             // errore nel pagamento
             dd('errore');
